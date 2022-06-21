@@ -1,0 +1,13 @@
+<p>products works!</p>
+<nav>
+    <ul>
+        <li><a href routerLink="main">Main</a></li>
+        <li><a href routerLink="more-info">More Info</a></li>
+    </ul>
+    <p>
+        <label for="id">Enter a Product Id:</label>
+        <input type="text" #id>
+        <button (click)="goToProduct(id.value)">Go to product</button>
+    </p>
+</nav>
+<router-outlet></router-outlet>

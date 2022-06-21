@@ -1,0 +1,21 @@
+<h1>Login</h1>
+<div role="alert" *ngIf="message">{{message}}</div>
+
+<form [formGroup]="theForm" *ngIf="!auth.getUser()">
+<div>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"
+    formControlName="username">
+</div>
+<div>
+    <label for="password">Password</label>
+    <input type="text" name="password" id="password"
+    formControlName="password">
+</div>
+<button (click)="login(theForm.value)">Login</button>
+</form>
+
+<div *ngIf="auth.getUser()">
+    Logged in as <b>{{auth.getUser()}}</b>
+    <a href (click)="logout()">&nbsp;Log out</a>
+</div>

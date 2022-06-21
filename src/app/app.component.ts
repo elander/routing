@@ -1,5 +1,5 @@
+import { AuthService } from './auth.service';
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-app';
+
+  constructor(public authService: AuthService){}
 }
